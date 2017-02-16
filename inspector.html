@@ -1,0 +1,350 @@
+<body>
+<link href="css/teamDetail.css" rel="stylesheet">
+
+<!-- Navigation -->
+<!-- Navigation -->
+<nav id="page-chat" class="navbar navbar-default navbar-fixed-top navbar-sm navbar-custom">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+
+            <a href="#/allrealtors" >
+          <span class="glyphicon glyphicon-chevron-left pull-left" style="padding-top:15px;padding-left: 10px">
+
+          </span>
+            </a>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+                <span class="sr-only">Toggle navigation</span>  <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="#/home">HE2</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="page-scroll">
+                    <a href="#/profiledata">Profile</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#/chatoptions">Chat for Answers</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#/BuildTeam">Build My Team</a>
+                </li>
+
+                <li class="page-scroll">
+                    <a href="#/road">My Road Map</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#/videos">BHC Classes</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#/lenderform">Mortage Planner</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#/login">Sign out</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div class="container" style="padding-top: 20%">
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+
+
+            <div class="panel panel-info"  >
+                <div class="panel-heading">
+                    <center><h2 class="panel-title">Manny Brook</h2></center>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://api.randomuser.me/portraits/men/60.jpg" class="img-circle img-responsive"> </div>
+                        <div class=" col-md-9 col-lg-9 ">
+                            <table class="table table-user-information">
+                                <tbody>
+                                <tr>
+                                    <td>Firm: Boston house inspectors</td>
+                                    <td>Associate inspector</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Date of Birth</td>
+                                    <td>01/24/1988</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Experience: </td>
+                                    <td>13 years</td>
+                                </tr>
+
+                                <tr>
+                                    <td>No. of homes inspected</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>Home Address</td>
+                                    <td>72nd Street, Boston, MA, 02120</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td><a href="steven@ps.com">manny@inspectors.com</a></td>
+                                </tr>
+                                <td>Phone Number</td>
+                                <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
+                                </td>
+
+                                </tr>
+
+                                </tbody>
+                            </table>
+                            <center>
+                                <a style="margin: 5px" class="btn btn-success btn-block  text-uppercase" data-toggle="modal" data-target="#bannerformmodal" id="reply"><span class="glyphicon glyphicon-envelope"></span> Message</a>
+                                <a ng-show="model.favourite" ng-click="model.send()" style="margin: 5px" class="btn btn-primary btn-block  text-uppercase"  id="favorite"><span class="glyphicon glyphicon-star"></span> Favorite</a>
+                                <a ng-show="!model.favourite" ng-click="model.remove()" style="margin: 5px; color: red" class="btn btn-primary btn-block  text-uppercase"  id="favorite"><span class="glyphicon glyphicon-remove"></span>Remove Favorite</a>
+                            </center>
+                            <div class="modal fade bannerformmodal" tabindex="-1" role="dialog" aria-labelledby="bannerformmodal" aria-hidden="true"
+                                 id="bannerformmodal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title" id="myModalLabel">Send Message</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form id="requestacallform" method="POST" name="requestacallform">
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"><i></i>Subject:</span>
+                                                            <input id="sudject" type="text" class="form-control" value="" name="first_name" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"><i></i>Message:</span>
+                                                            <textarea rows="4" cols="50" name="comment" class="form-control" form="requestacallform">
+                                                            </textarea>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal" id="myacc_submit">Send</button>
+                                                <button type="button" class="btn btn-blue" data-dismiss="modal" aria-hidden="true">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--comments-->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1" id="logout">
+            <div class="page-header">
+                <h3 class="reviews">Leave your comment</h3>
+            </div>
+            <div class="comment-tabs">
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="comments-logout">
+                        <ul class="media-list">
+                            <li class="media">
+
+                                <div class="media-body">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg" alt="profile">
+                                    </a>
+                                    <div class="well well-lg">
+                                        <h4 class="media-heading text-uppercase reviews">Marco </h4>
+                                        <ul class="media-date text-uppercase reviews list-inline">
+                                            <li class="dd">22</li>
+                                            <li class="mm">09</li>
+                                            <li class="aaaa">2014</li>
+                                        </ul>
+                                        <p class="media-comment">
+                                            Manny is an amazing home inspector , always gets the job done.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="replyOne">
+                                    <ul class="media-list">
+                                        <li class="media media-replied">
+
+                                            <div class="media-body">
+                                                <a class="pull-left" href="#">
+                                                    <img class="media-object img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/ManikRathee/128.jpg" alt="profile">
+                                                </a>
+                                                <div class="well well-lg">
+                                                    <h4 class="media-heading text-uppercase reviews"><span class="glyphicon glyphicon-share-alt"></span> The Hipster</h4>
+                                                    <ul class="media-date text-uppercase reviews list-inline">
+                                                        <li class="dd">22</li>
+                                                        <li class="mm">09</li>
+                                                        <li class="aaaa">2014</li>
+                                                    </ul>
+                                                    <p class="media-comment">
+                                                        This guys is a genius
+                                                    </p>
+                                                    <a class="btn btn-info btn-circle text-uppercase" href="#" id="reply"><span class="glyphicon glyphicon-share-alt"></span> Reply</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="media media-replied" id="replied">
+
+                                            <div class="media-body">
+                                                <a class="pull-left" href="#">
+                                                    <img class="media-object img-circle" src="https://pbs.twimg.com/profile_images/442656111636668417/Q_9oP8iZ.jpeg" alt="profile">
+                                                </a>
+                                                <div class="well well-lg">
+                                                    <h4 class="media-heading text-uppercase reviews"><span class="glyphicon glyphicon-share-alt"></span> Mary</h4></h4>
+                                                    <ul class="media-date text-uppercase reviews list-inline">
+                                                        <li class="dd">22</li>
+                                                        <li class="mm">09</li>
+                                                        <li class="aaaa">2014</li>
+                                                    </ul>
+                                                    <p class="media-comment">
+                                                        This guy sucks.
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="media">
+
+                                <div class="media-body">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kurafire/128.jpg" alt="profile">
+                                    </a>
+                                    <div class="well well-lg">
+                                        <h4 class="media-heading text-uppercase reviews">Nico</h4>
+                                        <ul class="media-date text-uppercase reviews list-inline">
+                                            <li class="dd">22</li>
+                                            <li class="mm">09</li>
+                                            <li class="aaaa">2014</li>
+                                        </ul>
+                                        <p class="media-comment">
+                                            Just the guy you are looking for when you need your home buying process
+                                            done with ease.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="media">
+
+                                <div class="media-body">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/lady_katherine/128.jpg" alt="profile">
+                                    </a>
+                                    <div class="well well-lg">
+                                        <h4 class="media-heading text-uppercase reviews">Kriztine</h4>
+                                        <ul class="media-date text-uppercase reviews list-inline">
+                                            <li class="dd">22</li>
+                                            <li class="mm">09</li>
+                                            <li class="aaaa">2014</li>
+                                        </ul>
+                                        <p class="media-comment">
+                                            Great guy
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="replyTwo">
+                                    <ul class="media-list">
+                                        <li class="media media-replied">
+
+                                            <div class="media-body">
+                                                <a class="pull-left" href="#">
+                                                    <img class="media-object img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/jackiesaik/128.jpg" alt="profile">
+                                                </a>
+                                                <div class="well well-lg">
+                                                    <h4 class="media-heading text-uppercase reviews"><span class="glyphicon glyphicon-share-alt"></span> Lizz</h4>
+                                                    <ul class="media-date text-uppercase reviews list-inline">
+                                                        <li class="dd">22</li>
+                                                        <li class="mm">09</li>
+                                                        <li class="aaaa">2014</li>
+                                                    </ul>
+                                                    <p class="media-comment">
+                                                        Classy!
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+
+
+                            <li class="media" ng-repeat="comment in model.list">
+
+                                <div class="media-body">
+                                    <a class="pull-left" >
+                                        <img class="media-object img-circle" src="images.jpg" alt="profile">
+                                    </a>
+                                    <div class="well well-lg">
+                                        <h4 class="media-heading text-uppercase reviews">James</h4>
+                                        <ul class="media-date text-uppercase reviews list-inline">
+                                            <li class="dd">22</li>
+                                            <li class="mm">09</li>
+                                            <li class="aaaa">2014</li>
+                                        </ul>
+                                        <p class="media-comment">
+                                            {{comment}}
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-----add comments--------------->
+                    <div class="" id="add-comment">
+
+                        <form  class="form-horizontal" id="commentForm" role="form">
+                            <div class="form-group">
+                                <label for="email" class="col-sm-2 control-label">Comment</label>
+                                <div class="col-sm-10">
+                                    <textarea ng-model="model.comment" class="form-control" name="addComment" id="addComment" rows="5"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button ng-click="model.send(model.comment)"  class="btn btn-primary  text-uppercase" type="submit" id="submitComment"><span class="glyphicon glyphicon-send"></span> Submit comment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------------------------------------------------>
+
+</div>
+</body>

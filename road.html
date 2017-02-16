@@ -1,0 +1,127 @@
+<!-- Navigation -->
+<!-- Navigation -->
+<nav id="page-chat" class="navbar navbar-default navbar-fixed-top navbar-sm navbar-custom">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+
+      <a href="#/home" >
+          <span class="glyphicon glyphicon-chevron-left pull-left" style="padding-top:15px;padding-left: 10px">
+
+          </span>
+      </a>
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+        <span class="sr-only">Toggle navigation</span>  <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-brand" href="#/home">HE2</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="page-scroll">
+          <a href="#/profiledata">Profile</a>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Options <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="page-scroll"><a href="#/chatoptions">Chat for Answers</a></li>
+            <li class="page-scroll"><a href="#/BuildTeam">Build My Team</a></li>
+            <li class="page-scroll"><a href="#/road">My Road Map</a></li>
+            <li class="page-scroll"><a href="#/videos">BHC Classes</a></li>
+            <li class="page-scroll"><a href="#/lenderform">Mortage Planner</a></li>
+          </ul>
+        </li>
+        <li class="page-scroll">
+          <a href="#/login">Sign out</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+  <center><h3>Road Map</h3></center>
+  <div>
+    <container><p>Whether you’re becoming a homeowner for the first time or you’re a repeat buyer, buying a house is a financial
+      and emotional decision that requires the experience and support of a team of reliable professionals. </p>
+      <p>
+        Below are steps you
+        should follow to get yourself a home that fits all your criteria. Click the options below to view the steps in detail.
+      </p>
+    </container>
+
+  </div>
+
+
+  <!--{{model.list}}-->
+
+
+  <div class="panel panel-default"  >
+    <div  class = "panel-heading" >
+      <a class= data-toggle="collapse" data-target= "#1">Find yourself a Realtor</a>
+
+      <input  ng-click="model.enable(panel.id)" class="pull-right " type="checkbox" checked="true" value="">
+
+      <label class="pull-right " style="padding-right:10px"> Done </label>
+
+      <div id= "1" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p>
+            In the maze of forms, financing, inspections, marketing, pricing, and negotiating, it makes sense to
+            work with professionals who know the community and much more. Those professionals are the local Realtors who
+            serve your area.
+          </p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default" >
+    <div  class = "panel-heading" >
+      <a data-toggle="collapse" data-target= "#2">Get a mortgare pre-approval</a>
+
+      <input   class="pull-right" type="checkbox" checked="true" value="checked">
+      <label class="pull-right" style="padding-right:10px"> Done </label>
+
+
+      <div id= "2" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p>
+            Most first-time buyers need to finance their home purchase, and a consultation with a mortgage lender
+            is a crucial step in the process. Find out how much you can afford before you begin your home search.
+          </p></div>
+      </div>
+    </div>
+  </div>
+
+  <div ng-repeat="panel in model.list">
+
+    <div class="panel panel-default" ng-show="{{panel.enable}}" >
+      <div  class = "panel-heading" >
+        <a data-toggle="collapse" data-target= "#{{panel.id}}">{{panel.heading}}</a>
+
+        <input  ng-click="model.enable(panel.id)" class="pull-right" type="checkbox" value="checked">
+        <label class="pull-right" style="padding-right:10px"> Done </label>
+
+
+        <div id= "{{panel.id}}" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p>
+              {{panel.content}}
+            </p></div>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+
+
+
+
+  </div>
+</div>

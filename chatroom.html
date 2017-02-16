@@ -1,0 +1,121 @@
+<!-- Navigation -->
+<!-- Navigation -->
+<nav id="page-chat" class="navbar navbar-default navbar-fixed-top navbar-sm navbar-custom">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+
+            <a href="#/chatoptions" >
+          <span class="glyphicon glyphicon-chevron-left pull-left" style="padding-top:15px;padding-left: 10px">
+
+          </span>
+            </a>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+                <span class="sr-only">Toggle navigation</span>  <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="#/home">HE2</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="page-scroll">
+                    <a href="#/profiledata">Profile</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Options <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="page-scroll"><a href="#/chatoptions">Chat for Answers</a></li>
+                        <li class="page-scroll"><a href="#/BuildTeam">Build My Team</a></li>
+                        <li class="page-scroll"><a href="#/road">My Road Map</a></li>
+                        <li class="page-scroll"><a href="#/videos">BHC Classes</a></li>
+                        <li class="page-scroll"><a href="#/lenderform">Mortage Planner</a></li>
+                    </ul>
+                </li>
+                <li class="page-scroll">
+                    <a href="#/login">Sign out</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+<div  >
+    <h3 class="container">14 people online</h3>
+    <div class="panel panel-default panel-height">
+
+        <div class="panel-body panel-body-scroll" >
+
+
+            <div class="row" >
+
+                <img ng-src="alex.jpg" class="col-xs-2 img-circle pull-left img-size" ><i><p>Alex</p></i></img>
+                <p class="col-xs-10" >
+                What is the minimum credit score I need to be eligible for government benefits
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="row" >
+
+                <img ng-src="baby.jpg" class="col-xs-2 img-circle pull-left img-size" ><i><p>Janice</p></i></img>
+                <p class="col-xs-10" >
+                    It also depends on various other factors, like income and debts
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="row" >
+
+                <img ng-src="serious-guy.jpg" class="col-xs-2 img-circle pull-left img-size" ><i><p>Chris</p></i></img>
+                <p class="col-xs-10" >
+                   How do I get my home insured for  disaters, I live in california
+                </p>
+            </div>
+
+            <hr>
+
+            <div ng-repeat="message in model.list">
+
+                <div  class="row">
+                    <img ng-src="images.jpg" class="col-xs-2 img-circle pull-right img-size" ><i></i></img>
+                    <i> <p class="pull-right">James</p></i>
+                    <p class="col-xs-10 pull-right">
+                        {{ message}}
+                    </p>
+
+                </div>
+                <hr>
+            </div>
+
+
+        </div>
+
+        <div class="panel-footer nav" style="height:50%">
+
+        <span class="input-group">
+
+            <input ng-model="model.message" type="text" class="form-control input-sm" placeholder="Type your message here...">
+      <span class="input-group-btn" style="color: #18BC9C">
+        <button type="submit" ng-click="model.send(model.message)" class="btn btn-success btn-sm" >send</button>
+      </span>
+        </span>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+    <a class="btn btn-primary" href="#page-chat">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>

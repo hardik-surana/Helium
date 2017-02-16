@@ -1,0 +1,176 @@
+<!-- Navigation -->
+<!-- Navigation -->
+<nav id="page-chat" class="navbar navbar-default navbar-fixed-top navbar-sm navbar-custom">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+
+            <a href="#/home" >
+          <span class="glyphicon glyphicon-chevron-left pull-left" style="padding-top:15px;padding-left: 10px">
+
+          </span>
+            </a>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+                <span class="sr-only">Toggle navigation</span>  <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="#/home">HE2</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="page-scroll">
+                    <a href="#/profiledata">Profile</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Options <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="page-scroll"><a href="#/chatoptions">Chat for Answers</a></li>
+                        <li class="page-scroll"><a href="#/BuildTeam">Build My Team</a></li>
+                        <li class="page-scroll"><a href="#/road">My Road Map</a></li>
+                        <li class="page-scroll"><a href="#/videos">BHC Classes</a></li>
+                        <li class="page-scroll"><a href="#/lenderform">Mortage Planner</a></li>
+                    </ul>
+                </li>
+                <li class="page-scroll">
+                    <a href="#/login">Sign out</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+<div class="container" style="padding-top: 20%">
+
+    <div class="comment-tabs">
+        <ul class="nav nav-tabs" role="tablist" style="font-size: small">
+            <li class="active"><a data-target="#classes" role="tab" data-toggle="tab" class="nav nav-tabs">Classes</a></li>
+            <li><a data-target="#seminars" role="tab" data-toggle="tab" class="nav nav-tabs">Seminars</a></li>
+            <li><a data-target="#testimony" role="tab" data-toggle="tab" class="nav nav-tabs">Testimonies</a></li>
+        </ul>
+        <!---------classes---------------------------------->
+        <div class="tab-content">
+            <div class="tab-pane active" id="classes">
+                <ul class="media-list">
+                    <li>
+                        <div class="col-sm-6">
+                            <h5 style="padding-top: 10px">Homebuyer 101</h5>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k2MstJpXAhs"></iframe>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <hr>
+                <ul class="media-list">
+                    <li>
+                        <div class="col-sm-6">
+                            <h5 style="padding-top: 10px">Homebuyer 102</h5>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bAdl2CC-sSI"></iframe>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <hr>
+                <ul class="media-list">
+                    <li>
+                        <div class="col-sm-6">
+                            <h5 style="padding-top: 10px">Homebuyer 103</h5>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SfNh34Zhc74"></iframe>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+            <!----------Seminars---------->
+            <div class="tab-pane" id="seminars">
+                <ul class="media-list">
+                    <li>
+                        <div class="col-sm-6">
+                            <h5 style="padding-top: 10px">BHC Housing Expo</h5>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-t6RrxXf9A"></iframe>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <hr>
+                <ul class="media-list">
+                    <li>
+                        <div class="col-sm-6">
+                            <h5 style="padding-top: 10px">BHC Lunch & Learn</h5>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dhDFtnR2a_w"></iframe>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+
+            <!----testimonies--------->
+            <div class="tab-pane" id="testimony">
+                <div class="form-group" style="padding-top: 10px">
+                    <label for="uploadMedia" class="col-sm-2 control-label">Upload media</label>
+                    <div >
+                        <div class="input-group">
+
+                            <input ng-model="model.link" type="url" class="form-control col-sm-4" placeholder="http//:">
+
+                            <span class="input-group-btn" style="color: #18BC9C">
+                     <button type="submit" ng-click="model.send(model.link)" class="btn btn-group-xs btn-primary col-sm-2 pull-right">upload</button>
+             </span>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            <div >
+                <ul class="media-list">
+                    <li ng-repeat="video in model.list">
+                        <div class="col-sm-6">
+                            <h5 style="padding-top: 10px">My testimony</h5>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" ng-src="https://www.youtube.com/embed/H88acyxrJe0"  ></iframe>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+                <ul class="media-list">
+                    <li>
+                        <div class="col-sm-6">
+                            <h5 style="padding-top: 10px">First time Home Buyers Testimonial</h5>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/H88acyxrJe0"></iframe>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <hr>
+                <ul class="media-list">
+                    <li>
+                        <div class="col-sm-6">
+                            <h5 style="padding-top: 10px">Dan Finn - My Experiece</h5>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/F1urCKkxDfI"></iframe>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>

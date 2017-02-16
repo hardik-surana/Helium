@@ -1,0 +1,84 @@
+<body>
+
+<!-- Navigation -->
+<nav id="page-chat" class="navbar navbar-default navbar-fixed-top navbar-sm navbar-custom">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+                <span class="sr-only">Toggle navigation</span>  <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="#/home">HE2</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="page-scroll">
+                    <a href="#/profiledata">Profile</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Options <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="page-scroll"><a href="#/chatoptions">Chat for Answers</a></li>
+                        <li class="page-scroll"><a href="#/BuildTeam">Build My Team</a></li>
+                        <li class="page-scroll"><a href="#/road">My Road Map</a></li>
+                        <li class="page-scroll"><a href="#/videos">BHC Classes</a></li>
+                        <li class="page-scroll"><a href="#/lenderform">Mortage Planner</a></li>
+                    </ul>
+                </li>
+                <li class="page-scroll">
+                    <a href="#/login">Sign out</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+<div class="container" style="padding-top: 20%">
+    <div class="row">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading c-list">
+                    <span class="title">Contacts</span>
+                </div>
+
+                <div class="row" style="display: none;">
+                    <div class="col-xs-12">
+                        <div class="input-group c-search">
+                            <input type="text" class="form-control" id="contact-list-search">
+              <span class="input-group-btn">
+                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search text-muted"></span></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="list-group" id="contact-list">
+                    <li class="list-group-item">
+                        <div class="col-xs-12 col-sm-3">
+                            <img src="http://api.randomuser.me/portraits/men/49.jpg" alt="Scott Stevens" class="img-responsive img-circle" />
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                            <a href="#/teamDetail"><span class="name">Scott Stevens</span></a><br>
+                            <span class="glyphicon glyphicon-map-marker text-muted c-info" data-toggle="tooltip" title="5842 Hillcrest Rd"></span>
+                            <span class="visible-xs"> <span class="text-muted">5842 Hillcrest Rd</span><br/></span>
+                            <span class="glyphicon glyphicon-earphone text-muted c-info" data-toggle="tooltip" title="(870) 288-4149"></span>
+                            <span class="visible-xs"> <span class=>(870) 288-4149</span><br/></span>
+                            <span class="fa fa-comments text-muted c-info" data-toggle="tooltip" title="scott.stevens@example.com"></span>
+                            <span class="visible-xs"> <span class="text-muted">scott.stevens@example.com</span><br/></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
